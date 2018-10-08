@@ -1,0 +1,13 @@
+[api]
+Host = "http://192.168.0.198"
+Port = 9000
+User = "doubleb"
+Password = "j4xg2nu46SUfZc23"
+
+[mopidy]
+Host = "localhost"
+Port = 6680
+
+[admin]
+User = "remedy"
+Password = "d0ubl3B"

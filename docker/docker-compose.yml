@@ -1,0 +1,23 @@
+version: '2'
+services:
+  react-routing-backend:
+    build: ./backend
+    ports:
+      - "9000:8000"
+    volumes:
+      - ../.:/app
+  react-routing-frontend:
+    build: ./frontend
+    ports:
+      - "9010:9010"
+    volumes:
+      - ../frontend:/app
+    depends_on:
+      - react-routing-backend
+  react-routing-nginx:
+    build: ./nginx
+    ports:
+      - "8889:8889"
+    depends_on:
+      - react-routing-frontend
+      - react-routing-backend
